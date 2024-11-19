@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chúc thầy Bão</title>
+    <!-- Thêm Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Thêm Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* Đặt lại CSS mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Thiết lập cho body và html */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Nền với hiệu ứng particles.js */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #87CEFA; /* Xanh da trời */
+            background-image: linear-gradient(120deg, #a6d4fa, #87CEFA, #4facfe); /* Gradient xanh da trời */
+            z-index: 1;
+        }
+
+        /* Nội dung chính */
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 0 20px;
+            overflow: hidden; /* Ẩn phần chữ bay ra ngoài */
+        }
+
+        /* Tiêu đề với hiệu ứng chữ bay */
+        .content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            font-family: 'Great Vibes', cursive;
+            white-space: nowrap; /* Không xuống dòng */
+            overflow: hidden; /* Ẩn phần chữ bay ra ngoài */
+            animation: typing 6s steps(30, end) infinite;
+            border-right: 4px solid rgba(255, 255, 255, 0.75); /* Hiệu ứng con trỏ nhấp nháy */
+        }
+
+        /* Hiệu ứng gõ chữ */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Hiệu ứng con trỏ nhấp nháy */
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: rgba(255, 255, 255, 0.75);
+            }
+        }
+
+        .content h1 {
+            width: 0; /* Bắt đầu từ độ rộng 0 */
+            animation: typing 5s steps(30, end) infinite, blink-caret .75s step-end infinite;
+        }
+
+        /* Hiệu ứng cho đoạn văn */
+        .content p {
+            font-size: 24px;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div class="content">
+    <h1>Chúc thầy Bão 20/11 vui vẻ ạ!</h1>
+    <p>Kính chúc thầy luôn mạnh khỏe, hạnh phúc và thành công trong sự nghiệp trồng người!</p>
+</div>
+
+<!-- Thư viện particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- Cấu hình particles.js -->
+<script>
+    particlesJS('particles-js',
+      {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": ["#ffffff", "#87CEFA", "#00BFFF", "#1E90FF"]
+          },
+          "shape": {
+            "type": ["circle", "star", "triangle"],
+            "stroke": {
+              "width": 0,
+              "color": "#000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.7,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 1,
+              "opacity_min": 0.3,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 4,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 3,
+              "size_min": 0.5,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": false
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": ["grab", "bubble"]
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "repulse"
+            }
+          },
+          "modes": {
+            "grab": {
+              "distance": 150,
+              "line_linked": {
+                "opacity": 0.5
+              }
+            },
+            "bubble": {
+              "distance": 200,
+              "size": 8,
+              "duration": 1,
+              "opacity": 0.8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 100,
+              "duration": 0.4
+            }
+          }
+        },
+        "retina_detect": true
+      }
+    );
+</script>
+
+<!-- Thư viện Fireworks.js -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/fireworks.js"></script>
+
+<!-- Khởi tạo hiệu ứng pháo hoa -->
+<script>
+  // Lấy phần tử container để chứa pháo hoa
+  const container = document.getElementById('particles-js');
+
+  // Tạo đối tượng Fireworks
+  const fireworks = new Fireworks(container, {
+    autoresize: true,
+    opacity: 0.5,
+    acceleration: 1.05,
+    friction: 0.95,
+    gravity: 1.5,
+    particles: 50,
+    trace: 3,
+    explosion: 5,
+    boundaries: {
+      x: 50,
+      y: 50,
+      width: container.clientWidth - 100,
+      height: container.clientHeight - 100
+    },
+    sound: {
+      enable: false
+    }
+  });
+
+  // Bắt đầu hiệu ứng pháo hoa
+  fireworks.start();
+</script>
+
+</body>
+</html>
